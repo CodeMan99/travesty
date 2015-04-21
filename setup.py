@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='travesty',
@@ -8,8 +6,12 @@ setup(
     license='BSD',
     author="Daniel Lepage",
     author_email="dplepage@gmail.com",
-    packages=['travesty','travesty.cantrips', 'travesty.document'],
-    long_description="""
+    packages=[
+        'travesty',
+        'travesty.cantrips',
+        'travesty.document',
+    ],
+    long_description="""\
 =======================================
  Travesty: Graph Traversal Dispatchers
 =======================================
@@ -25,13 +27,13 @@ See README.rst for more info.
 """,
     url='https://github.com/dplepage/travesty',
     install_requires=[
-        'vertigo'
+        'vertigo',
     ],
     test_requires=[
-        'doctest-ignore-unicode'
+        'doctest-ignore-unicode',
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 2",
-    ]
+    ],
 )
